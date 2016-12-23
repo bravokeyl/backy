@@ -1,0 +1,47 @@
+.header .top-details {
+  font-size: 18px;
+  font-weight:bold;
+}
+.header .top-details a {
+  color: #777;
+}
+.LeaseStationButton.ls-detail-button {
+  margin-left: 0px !important;
+}
+.sidebar {
+  background: #00a9d1;
+  color: #fff;
+  margin-top: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.sidebar a,
+.sidebar .widget .widgettitle,
+.sidebar .widget li a, 
+.sidebar .widget .product_list_widget li a,
+.sidebar .widget.widget_archive li a, 
+.sidebar .widget.widget_pages li a,
+.sidebar .widget.widget_product_categories li a,
+.sidebar .widget.widget_recent_comments li a,
+.sidebar .widget.widget_meta li a, 
+.sidebar .widget.widget_categories li a, 
+.sidebar .widget_recent_entries li a {
+  color: #fff;
+}
+.product_meta .sku_wrapper,
+.product_meta .posted_in {
+  display: none;
+}
+.product-addon {
+	float: left;
+  padding-right: 10px;
+}
+.product-addon.product-addon-color {
+	float: none;
+  clear: both;
+  overflow: hidden;
+}
+.woo-products.container.boxed {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
