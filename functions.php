@@ -43,3 +43,21 @@ add_action('wp_footer','bk_review_widget',25);
 function bk_review_widget() {?>
 	<script type='text/javascript'> var ucode='aHR0cHM6Ly9yZXZpZXd3aWRnZXQua3BpYW5hbHlzZXIuY29tLw=='; var code='ebdfb6cf47af6c4ac85b864f4acc3232'; var _rewF = document.createElement('script'); _rewF.type = 'text/javascript'; _rewF.async = true; _rewF.src = "https://reviewwidget.kpianalyser.com/js/reviews.js"; (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(_rewF); </script>
 <?php }
+
+add_action('woocommerce_archive_description','bk_woo_category_images');
+function bk_woo_category_images(){
+	if (is_product_category("custom-design")) { ?>
+	<div class="custom-design-cat-image">
+		<a target="_blank" href="http://www.lowes.com/Bathroom-Vanities-Vanity-Tops/Bathroom-Vanities/Bathroom-Vanities-with-Tops/_/N-1z0xzqkZ1z0vgdm/pl?cm_sp=-_-Bathroom|PopularCat-_-Merch|Single_Bowl_Vanity&cm_cr=Bathroom+Vanities+and+Vanity+Tops-_-Web+Activity-_-Bathroom+Vanities+and+Vanity+Tops+TF+Activity+12.21-_-SC_Bathroom+Vanities++Vanity+Tops_TopFlexible_Area-_-10272560_1_pl"><img src="http://www.portablesink.com/wp-content/uploads/Custom-Cabinets.jpg" alt="Choose Your Own Cabinet"></a>
+	</div>
+	<?php
+	}
+	if (is_product_category("1-2-3-or-4-basin-portable-sinks")) { ?>
+	<div class="basin-1234-cat-image">
+		<a target="_blank" href="http://www.lowes.com/Bathroom-Vanities-Vanity-Tops/Bathroom-Vanities/Bathroom-Vanities-with-Tops/_/N-1z0xzqkZ1z0vgdm/pl?cm_sp=-_-Bathroom|PopularCat-_-Merch|Single_Bowl_Vanity&cm_cr=Bathroom+Vanities+and+Vanity+Tops-_-Web+Activity-_-Bathroom+Vanities+and+Vanity+Tops+TF+Activity+12.21-_-SC_Bathroom+Vanities++Vanity+Tops_TopFlexible_Area-_-10272560_1_pl"><img src="http://www.portablesink.com/wp-content/uploads/Custom-Cabinets.jpg" alt="Choose Your Own Cabinet"></a>
+	</div>
+	<?php } ?>
+	<div class="pick-color">
+		<a target="_blank" href="http://www.wilsonart.com/commercial/laminates/designs"><img src="http://www.portablesink.com/wp-content/uploads/Custom-Colors.png" alt=""></a>
+	</div>
+<?php }
