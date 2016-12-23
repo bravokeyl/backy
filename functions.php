@@ -44,6 +44,17 @@ function bk_review_widget() {?>
 	<script type='text/javascript'> var ucode='aHR0cHM6Ly9yZXZpZXd3aWRnZXQua3BpYW5hbHlzZXIuY29tLw=='; var code='ebdfb6cf47af6c4ac85b864f4acc3232'; var _rewF = document.createElement('script'); _rewF.type = 'text/javascript'; _rewF.async = true; _rewF.src = "https://reviewwidget.kpianalyser.com/js/reviews.js"; (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(_rewF); </script>
 <?php }
 
+add_action('woocommerce_archive_description','bk_wpv_wooimage',7);
+function bk_wpv_wooimage(){
+  if (is_product_category( array ( 14, 15, 17, 18, 21, 22, 23, 24, 25, 26, 27, 40, 41, 42, 43, 20))){
+      global $wp_query;
+      $cat = $wp_query->get_queried_object();
+      $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+      $image = wp_get_attachment_url( $thumbnail_id );
+      echo '<img src="'.$image.'" class="img-responsive" alt="mobile sink unit" width="667" height="250" />';
+  }
+}
+
 add_action('woocommerce_archive_description','bk_woo_category_images',8);
 function bk_woo_category_images(){
 	if (is_product_category("custom-design") || is_product_category("1-2-3-or-4-basin-portable-sinks")
