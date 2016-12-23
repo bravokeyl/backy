@@ -46,17 +46,14 @@ function bk_review_widget() {?>
 
 add_action('woocommerce_archive_description','bk_woo_category_images',8);
 function bk_woo_category_images(){
-	if (is_product_category("custom-design")) { ?>
-	<div class="custom-design-cat-image">
+	if (is_product_category("custom-design") || is_product_category("1-2-3-or-4-basin-portable-sinks")
+	|| is_product_category("wood-cabinet-portable-sinks") || is_product_category("1-2-3-or-4-basin-portable-sinks") || is_product_category("one-basin-sinks")
+	|| is_product_category("two-basin-sinks") || is_product_category("three-basin-sinks")
+	|| is_product_category("four-basin-sinks") ) { ?>
+	<div class="custom-cabinet-cat-image">
 		<a target="_blank" href="http://www.lowes.com/Bathroom-Vanities-Vanity-Tops/Bathroom-Vanities/Bathroom-Vanities-with-Tops/_/N-1z0xzqkZ1z0vgdm/pl?cm_sp=-_-Bathroom|PopularCat-_-Merch|Single_Bowl_Vanity&cm_cr=Bathroom+Vanities+and+Vanity+Tops-_-Web+Activity-_-Bathroom+Vanities+and+Vanity+Tops+TF+Activity+12.21-_-SC_Bathroom+Vanities++Vanity+Tops_TopFlexible_Area-_-10272560_1_pl"><img src="http://www.portablesink.com/wp-content/uploads/Custom-Cabinets.jpg" alt="Choose Your Own Cabinet"></a>
 	</div>
-	<?php
-	}
-	if (is_product_category("1-2-3-or-4-basin-portable-sinks")) { ?>
-	<div class="basin-1234-cat-image">
-		<a target="_blank" href="http://www.lowes.com/Bathroom-Vanities-Vanity-Tops/Bathroom-Vanities/Bathroom-Vanities-with-Tops/_/N-1z0xzqkZ1z0vgdm/pl?cm_sp=-_-Bathroom|PopularCat-_-Merch|Single_Bowl_Vanity&cm_cr=Bathroom+Vanities+and+Vanity+Tops-_-Web+Activity-_-Bathroom+Vanities+and+Vanity+Tops+TF+Activity+12.21-_-SC_Bathroom+Vanities++Vanity+Tops_TopFlexible_Area-_-10272560_1_pl"><img src="http://www.portablesink.com/wp-content/uploads/Custom-Cabinets.jpg" alt="Choose Your Own Cabinet"></a>
-	</div>
-	<?php } ?>
+	<?php }?>
 	<div class="pick-color">
 		<a target="_blank" href="http://www.wilsonart.com/commercial/laminates/designs"><img src="http://www.portablesink.com/wp-content/uploads/Custom-Colors.png" alt=""></a>
 	</div>
