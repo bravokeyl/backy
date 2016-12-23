@@ -90,7 +90,7 @@ $classes[] = 'load-element';
 					$temp_title = get_the_title($post->ID); //title
 					$temp_link = get_permalink($post->ID); //permalink
 					global $smof_data;
-					
+
 					$shop_width = 398; $shop_height = 494;
 
 					$img = $image_thumb_url[0] = "";
@@ -111,47 +111,47 @@ $classes[] = 'load-element';
 							}
 
 						}
-						
 
-						$amz_gallery_ids = $product->get_gallery_attachment_ids();
 
-						if ( $amz_gallery_ids ) {
-							$amz_image_thumb_url = wp_get_attachment_image_src( $amz_gallery_ids[0], 'full');
-							$amz_image_url = $amz_image_thumb_url[0];
-
-							if( ! empty( $amz_image_url ) ) {
-								$amz_image_url = aq_resize( $amz_image_url, $shop_width, $shop_height, true, true );
-							}
-
-							if( $amz_image_url ) {
-								echo '<img alt="" class="amz-image-swap" src="' . $amz_image_url . '" width="' . $shop_width . '" height="' . $shop_height . '">';
-							} else {
-								echo '<img alt="" class="amz-image-swap" src="' . $amz_image_thumb_url[0] . '" width="' . $amz_image_thumb_url[1] . '" height="' . $amz_image_thumb_url[2] . '">';
-							}
-
-						}
+						// $amz_gallery_ids = $product->get_gallery_attachment_ids();
+						//
+						// if ( $amz_gallery_ids ) {
+						// 	$amz_image_thumb_url = wp_get_attachment_image_src( $amz_gallery_ids[0], 'full');
+						// 	$amz_image_url = $amz_image_thumb_url[0];
+						//
+						// 	if( ! empty( $amz_image_url ) ) {
+						// 		$amz_image_url = aq_resize( $amz_image_url, $shop_width, $shop_height, true, true );
+						// 	}
+						//
+						// 	if( $amz_image_url ) {
+						// 		echo '<img alt="" class="amz-image-swap" src="' . $amz_image_url . '" width="' . $shop_width . '" height="' . $shop_height . '">';
+						// 	} else {
+						// 		echo '<img alt="" class="amz-image-swap" src="' . $amz_image_thumb_url[0] . '" width="' . $amz_image_thumb_url[1] . '" height="' . $amz_image_thumb_url[2] . '">';
+						// 	}
+						//
+						// }
 
 					} else {
-						echo '<img src="'. esc_url( '//placehold.it/'.$shop_width.'x'.$shop_height ).'" alt="">';	
+						echo '<img src="'. esc_url( '//placehold.it/'.$shop_width.'x'.$shop_height ).'" alt="">';
 					}
-						
+
 					echo '<div class="product-hover product-icons">
-							';								
+							';
 						echo woocommerce_template_loop_add_to_cart();
 
 					echo '</div>
 						';
 			echo '</div>';
-		
-		
+
+
 
 
 		//Product Name and content
 		$output = '<div class="product-content clearfix">'; //Product Content
 			//Product name
-			
-			$output .= '<h3 class="title"> <a href='. esc_url( $temp_link ) .'> '.esc_html( $temp_title ).'</a></h3>'; //title			
-				
+
+			$output .= '<h3 class="title"> <a href='. esc_url( $temp_link ) .'> '.esc_html( $temp_title ).'</a></h3>'; //title
+
 		echo $output; // html fragment properly escaped above
 ?>
 
@@ -175,8 +175,8 @@ $classes[] = 'load-element';
 	woocommerce_template_loop_price();
 
 	do_action( 'woocommerce_after_shop_loop_item_title' );
-			
-			
+
+
 			//woocommerce_template_loop_add_to_cart();
 
 				$output = '</div>'; //End of Product Content
