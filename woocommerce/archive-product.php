@@ -67,7 +67,7 @@ $selected_sidebar_replacement = composer_get_option_value( 'shop_select_sidebar'
 			<div class="loadmore-wrap">
 				<?php woocommerce_product_loop_start(); ?>
 
-					<?php woocommerce_product_subcategories(); ?>
+					<?php //woocommerce_product_subcategories(); ?>
 						<div class="load-container">
 							<?php while ( have_posts() ) : the_post(); ?>
 
