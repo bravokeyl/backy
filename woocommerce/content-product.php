@@ -174,7 +174,9 @@ $classes[] = 'load-element';
 	 */
 
 	woocommerce_template_loop_price();
+	echo '<div class="">';
 	echo woocommerce_template_loop_add_to_cart();
+	echo '</div>';
 	do_action( 'woocommerce_after_shop_loop_item_title' );
 
 
