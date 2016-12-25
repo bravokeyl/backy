@@ -35,7 +35,7 @@ $selected_sidebar_replacement = composer_get_option_value( 'shop_select_sidebar'
 		 */
 		remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 		do_action( 'woocommerce_before_main_content' );
-		
+
 		if ( $page_layout == 'right-sidebar' || $page_layout == 'left-sidebar' ) {
 			echo '<div class="row padding-top">';
 
@@ -53,7 +53,9 @@ $selected_sidebar_replacement = composer_get_option_value( 'shop_select_sidebar'
 			do_action( 'woocommerce_archive_description' );
 		?>
 
-		<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) :
+			$bkloop = 0;
+			?>
 
 			<?php
 				/**
@@ -88,7 +90,7 @@ $selected_sidebar_replacement = composer_get_option_value( 'shop_select_sidebar'
 
 				    // Arguements array
 				    $shop_count = composer_get_option_value( 'shop_count', 8 );
-				    
+
 				    $args = array(
 				    	'post_type'	=> 'product',
 				    	'posts_per_page' => $shop_count
@@ -97,7 +99,7 @@ $selected_sidebar_replacement = composer_get_option_value( 'shop_select_sidebar'
 				    // Values array
 				    $values = array();
 
-					$values['style']               = $pagination;    
+					$values['style']               = $pagination;
 					$values['loadmore_text']       = $loadmore_text;
 					$values['allpost_loaded_text'] = $allpost_loaded_text;
 					$values['action']              = 'shop_loadmore';
