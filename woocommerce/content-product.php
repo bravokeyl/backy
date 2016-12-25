@@ -137,7 +137,7 @@ $classes[] = 'load-element';
 
 					echo '<div class="product-hover product-icons">
 							';
-						echo woocommerce_template_loop_add_to_cart();
+						//echo woocommerce_template_loop_add_to_cart();
 
 					echo '</div>
 						';
@@ -153,6 +153,7 @@ $classes[] = 'load-element';
 			$output .= '<h3 class="title"> <a href='. esc_url( $temp_link ) .'> '.esc_html( $temp_title ).'</a></h3>'; //title
 
 		echo $output; // html fragment properly escaped above
+		echo woocommerce_template_loop_add_to_cart();
 ?>
 
 <?php
