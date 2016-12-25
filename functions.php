@@ -62,7 +62,7 @@ function bk_woo_category_images(){
 	|| is_product_category("two-basin-sinks") || is_product_category("three-basin-sinks")
 	|| is_product_category("four-basin-sinks") ) { ?>
 	<div class="custom-cabinet-cat-image">
-		<a target="_blank" href="http://www.lowes.com/Bathroom-Vanities-Vanity-Tops/Bathroom-Vanities/Bathroom-Vanities-with-Tops/_/N-1z0xzqkZ1z0vgdm/pl?cm_sp=-_-Bathroom|PopularCat-_-Merch|Single_Bowl_Vanity&cm_cr=Bathroom+Vanities+and+Vanity+Tops-_-Web+Activity-_-Bathroom+Vanities+and+Vanity+Tops+TF+Activity+12.21-_-SC_Bathroom+Vanities++Vanity+Tops_TopFlexible_Area-_-10272560_1_pl"><img src="http://www.portablesink.com/wp-content/uploads/2013/08/Custom-Cabinets.jpg" alt="Choose Your Own Cabinet"></a>
+		<a target="_blank" href="http://www.lowes.com/Bathroom-Vanities-Vanity-Tops/Bathroom-Vanities/Bathroom-Vanities-with-Tops/_/N-1z0xzqkZ1z0vgdm/pl?cm_sp=-_-Bathroom|PopularCat-_-Merch|Single_Bowl_Vanity&cm_cr=Bathroom+Vanities+and+Vanity+Tops-_-Web+Activity-_-Bathroom+Vanities+and+Vanity+Tops+TF+Activity+12.21-_-SC_Bathroom+Vanities++Vanity+Tops_TopFlexible_Area-_-10272560_1_pl"><img src="http://www.portablesink.com/wp-content/uploads/Custom-Cabinets.jpg" alt="Choose Your Own Cabinet"></a>
 	</div>
 	<?php }?>
 	<div class="pick-color">
