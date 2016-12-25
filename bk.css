@@ -45,7 +45,16 @@
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.term-49 .pick-color {
+.term-49 .pick-color,
+.term-15 .pick-color,
+.term-17 .pick-color,
+.term-18 .pick-color,
+.term-19 .pick-color,
+.term-21 .pick-color,
+.term-25 .pick-color,
+.term-26 .pick-color,
+.term-27 .pick-color,
+.term-46 .pick-color {
   display: none;
 }
 .archive .product:nth-child(3n+1) {
