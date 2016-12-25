@@ -102,13 +102,13 @@ $classes[] = 'load-element';
 
 						if( ! empty( $amz_image_url ) ) {
 
-							$image_url = aq_resize( $amz_image_url, $shop_width, $shop_height, true, true );
+							//$image_url = aq_resize( $amz_image_url, $shop_width, $shop_height, true, true );
 
-							if( $image_url ) {
-								echo '<img alt="" src="' . $image_url . '" width="' . $shop_width . '" height="' . $shop_height . '">';
-							} else {
+							// if( $image_url ) {
+							// 	echo '<img alt="" src="' . $image_url . '" width="' . $shop_width . '" height="' . $shop_height . '">';
+							// } else {
 								echo '<img alt="" src="' . $amz_image_thumb_url[0] . '" width="' . $amz_image_thumb_url[1] . '" height="' . $amz_image_thumb_url[2] . '">';
-							}
+							// }
 
 						}
 
