@@ -68,4 +68,19 @@ function bk_woo_category_images(){
 	<div class="pick-color">
 		<a target="_blank" href="http://www.wilsonart.com/commercial/laminates/designs"><img src="http://www.portablesink.com/wp-content/uploads/Custom-Colors.png" alt=""></a>
 	</div>
-<?php }
+	<?php
+	if (is_product_category( array (20))){
+    global $wp_query;
+    $cat = $wp_query->get_queried_object();
+    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+    $image = wp_get_attachment_url( $thumbnail_id );
+		echo '<br />';
+		echo '<div style="margin:30px 0 0 0">Please click on the following categories to view more sinks.</div>';
+		echo '<br />';
+		echo '<a href="http://www.portablesink.com/product-category/1-2-3-or-4-basin-portable-sinks/one-basin-sinks/"><img style="margin: 5px 0 30px 0px" src="/wp-content/uploads/cat-one-basin.png" alt="one basin sink" width="250" height="156" /></a>';
+		echo '<a href="http://www.portablesink.com/product-category/1-2-3-or-4-basin-portable-sinks/two-basin-sinks/"><img style="margin: 5px 0 30px 100px" src="/wp-content/uploads/cat-two-basin.png" alt="double basin sink" width="250" height="156" /></a>';
+		echo '<br />';
+		echo '<a href="http://www.portablesink.com/product-category/1-2-3-or-4-basin-portable-sinks/three-basin-sinks/"><img style="margin: 0 0 0px 0px"src="/wp-content/uploads/cat-three-basin.png" alt="three basin sink" width="250" height="156" /></a>';
+		echo '<a href="http://www.portablesink.com/product-category/1-2-3-or-4-basin-portable-sinks/four-basin-sinks/"><img style="margin: 0 0 0px 100px" src="/wp-content/uploads/cat-four-basin.png" alt="four basin sink" width="250" height="156" /></a>';
+  }
+}
