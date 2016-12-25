@@ -69,6 +69,13 @@ function bk_woo_category_images(){
 		<a target="_blank" href="http://www.wilsonart.com/commercial/laminates/designs"><img src="http://www.portablesink.com/wp-content/uploads/Custom-Colors.png" alt=""></a>
 	</div>
 	<?php
+	if (is_product_category( array (19))){
+			global $wp_query;
+			$cat = $wp_query->get_queried_object();
+			$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+			$image = wp_get_attachment_url( $thumbnail_id );
+			echo '<img src="'.$image.'" alt=" mobile sink unit" width="667" class="term--19" height="975" />';
+	}
 	if (is_product_category( array (20))){
     global $wp_query;
     $cat = $wp_query->get_queried_object();
