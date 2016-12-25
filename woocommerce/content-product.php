@@ -97,7 +97,7 @@ $classes[] = 'load-element';
 
 					if ( has_post_thumbnail() ) {
 
-						$amz_image_thumb_url = wp_get_attachment_image_src( get_post_thumbnail_id (), 'full');
+						$amz_image_thumb_url = wp_get_attachment_image_src( get_post_thumbnail_id (), 'thumbnail');
 						$amz_image_url = $amz_image_thumb_url[0];
 
 						if( ! empty( $amz_image_url ) ) {
