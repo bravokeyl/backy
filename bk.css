@@ -49,5 +49,5 @@
   /*display: none;*/
 }
 .archive .product:nth-child(3n+1 {
-  float: left;
+  clear: left;
 }
