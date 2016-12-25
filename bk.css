@@ -45,8 +45,8 @@
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.archive.woocommerce-page .pick-color {
-  /*display: none;*/
+.term-49 .pick-color {
+  display: none;
 }
 .archive .product:nth-child(3n+1) {
   clear: left;
