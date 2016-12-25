@@ -52,7 +52,7 @@ $selected_sidebar_replacement = composer_get_option_value( 'shop_select_sidebar'
 			 */
 			do_action( 'woocommerce_archive_description' );
 		?>
-
+		<?php if(!is_product_category( array (20))) { ?>
 		<?php if ( have_posts() ) : ?>
 
 			<?php
@@ -120,7 +120,7 @@ $selected_sidebar_replacement = composer_get_option_value( 'shop_select_sidebar'
 			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
 		<?php endif; ?>
-
+		<?php } ?>
 	<?php
 		/**
 		 * woocommerce_after_main_content hook.
