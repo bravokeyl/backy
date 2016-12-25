@@ -53,9 +53,7 @@ $selected_sidebar_replacement = composer_get_option_value( 'shop_select_sidebar'
 			do_action( 'woocommerce_archive_description' );
 		?>
 
-		<?php if ( have_posts() ) :
-			$bkloop = 0;
-			?>
+		<?php if ( have_posts() ) : ?>
 
 			<?php
 				/**

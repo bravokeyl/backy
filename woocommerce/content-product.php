@@ -41,7 +41,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 
 // Increase loop count
-$bkloop++;
 $woocommerce_loop['loop']++;
 
 // Extra post classes
@@ -52,14 +51,7 @@ if( $page_layout == 'right-sidebar' || $page_layout == 'left-sidebar' ){
 	$classes = array('col-md-3');
 }
 
-if ( 0 === ( $bkloop - 1 ) % 3  ) {
-	$classes[] = 'first';
-}
-if ( 0 === $bkloop % 3 ) {
-	$classes[] = 'last';
-}
-
-$classes[] = 'load-element '.$woocommerce_loop['loop'].' '.$bkloop.' ';
+$classes[] = 'load-element ';
 
 ?>
 
