@@ -51,14 +51,14 @@ if( $page_layout == 'right-sidebar' || $page_layout == 'left-sidebar' ){
 	$classes = array('col-md-3');
 }
 
-if ( 0 === ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 === $woocommerce_loop['columns'] ) {
+if ( 0 === ( $woocommerce_loop['loop'] - 1 ) % 3  ) {
 	$classes[] = 'first';
 }
-if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
+if ( 0 === $woocommerce_loop['loop'] % 3 ) {
 	$classes[] = 'last';
 }
 
-$classes[] = 'load-element';
+$classes[] = 'load-element '.$woocommerce_loop['loop'].' ';
 
 ?>
 
