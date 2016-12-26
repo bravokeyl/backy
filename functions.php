@@ -103,13 +103,13 @@ function bk_display_header_elements( $elems, $header_pos = 'default-header-lang'
 
 	global $smof_data;
 
-	echo '<div class="header-elem">
-	    <p class="top-details rent-quote clearfix">
-	      <a href="/contact-us">Do you want to rent instead? Request a quote.</a>
-	    </p>
-	</div>';
-	if( $elems == 'tel' ){
 
+	if( $elems == 'tel' ){
+		echo '<div class="header-elem">
+		    <p class="top-details rent-quote clearfix">
+		      <a href="/contact-us">Do you want to rent instead? Request a quote.</a>
+		    </p>
+		</div>';
 		echo composer_header_contact_info_tel();
 
 	} elseif( $elems == 'email' ){
