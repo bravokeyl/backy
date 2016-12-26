@@ -98,3 +98,76 @@ function bk_woo_category_images(){
 		echo '<a href="http://www.portablesink.com/product-category/1-2-3-or-4-basin-portable-sinks/four-basin-sinks/"><img style="margin: 0 0 0px 100px" src="/wp-content/uploads/cat-four-basin.png" alt="four basin sink" width="250" height="156" /></a>';
   }
 }
+
+function bk_display_header_elements( $elems, $header_pos = 'default-header-lang', $page_side = '' ){
+
+	global $smof_data;
+
+	if( $elems == 'tel' ){
+
+		echo composer_header_contact_info_tel();
+
+	} elseif( $elems == 'email' ){
+
+		echo composer_header_contact_info_email();
+
+	} elseif( $elems == 'lang' ){
+
+		if(class_exists('SitePress')){
+			echo '<div class="header-elem">';
+				echo '<div class="default-header-lang '. esc_attr( $header_pos ) . ' '. esc_attr( $page_side ) .'">';
+				composer_languages_list();
+				echo '</div>';
+			echo '</div>';
+		}
+
+	} elseif( $elems == 'cart' ){
+		if ( class_exists( 'Woocommerce' ) ) {
+			composer_woo_cart();
+		}
+
+	} elseif( $elems == 'sicons' ){
+
+		echo composer_social_icons();
+
+	} elseif( $elems == 'top_menu' ){
+
+		echo '<div class="header-elem">';
+			composer_top_nav();
+		echo '</div>';
+
+	} elseif( $elems == 'footer_menu' ){
+
+		echo '<div class="header-elem">';
+			composer_footer_nav();
+		echo '</div>';
+
+	} elseif( $elems == 'search' ){
+
+		echo '<div class="header-elem">';
+			get_search_form();
+		echo '</div>';
+
+	} elseif( $elems == 'text' ){
+		if( !empty( $smof_data['top_text'] ) ){
+			echo '<div class="header-elem">';
+				echo '<p>'. esc_html( $smof_data['top_text'] ) .'</p>';
+			echo '</div>';
+		}
+
+	} elseif( $elems == 'search_icon' ){
+
+		echo '<div class="header-elem">';
+			echo composer_header_search();
+		echo '</div>';
+	} elseif( $elems == 'copyright_text' ){
+
+		echo '<div class="header-elem">';
+
+			$footer_copyright_t = composer_get_option_value( 'f_copyright_t', '&copy;'. date('Y') . ' [blog-link],' . esc_html__('All Rights Reserved.', 'composer' ) );
+
+			echo '<p class="copyright-text">' . do_shortcode( $footer_copyright_t )  . '</p>'; // it escaped properly above
+
+		echo '</div>';
+	}
+}

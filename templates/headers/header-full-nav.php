@@ -48,7 +48,7 @@ $flyin_sidebar = composer_get_option_value( 'flyin_sidebar', 'off' );
 
 						$main_sorter_right = composer_get_option_array_value('main_sorter','right', $main_sorter['right'] );
 						foreach ( $main_sorter_right as $key => $value ) {
-							composer_display_header_elements( $key, 'lang-list-wrap', 'page-top-main' );
+							bk_display_header_elements( $key, 'lang-list-wrap', 'page-top-main' );
 						}
 					?>
 				</div>
