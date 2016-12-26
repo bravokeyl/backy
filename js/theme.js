@@ -1,9 +1,3 @@
-/*
-Name: 			Theme Base
-Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	5.1.0
-*/
-
 // Theme
 window.theme = {};
 
@@ -490,7 +484,7 @@ window.theme = {};
 		effect: 'show',
 		appearEffect: '',
 		appear: function(elements_left, settings) {
-			
+
 		},
 		load: function(elements_left, settings) {
 			$(this).addClass($.trim('lazy-load-loaded ' + settings.appearEffect));
@@ -1701,13 +1695,13 @@ window.theme = {};
 			self.$destination.attr('data-filter', filter).isotope({
 				filter: currentFilter
 			}).one('arrangeComplete', function( event, filteredItems ) {
-				
+
 				if (self.options.useHash) {
 					if (window.location.hash != '' || self.options.filter.replace('.', '') != '*') {
 						window.location.hash = self.options.filter.replace('.', '');
 					}
 				}
-				
+
 				$(window).trigger('scroll');
 
 			}).trigger('filtered');
@@ -1810,9 +1804,9 @@ window.theme = {};
 
 // Sticky
 (function(theme, $) {
-	
+
 	theme = theme || {};
-	
+
 	var instanceName = '__sticky';
 
 	var PluginSticky = function($el, opts) {
@@ -1861,7 +1855,7 @@ window.theme = {};
 
 			var self = this,
 				$window = $(window);
-			
+
 			self.options.wrapper.pin(self.options);
 
 			$window.afterResize(function() {
@@ -1869,7 +1863,7 @@ window.theme = {};
 				self.options.wrapper.pin(self.options);
 				$window.trigger('scroll');
 			});
-			
+
 			return this;
 		}
 	};
@@ -1889,7 +1883,7 @@ window.theme = {};
 			} else {
 				return new PluginSticky($this, opts);
 			}
-			
+
 		});
 	}
 
@@ -2245,7 +2239,7 @@ window.theme = {};
 					e.preventDefault();
 					$.get(self.options.refreshCaptchaURL, function(url) {
 						$('#captcha-image').attr('src', url);
-					});					
+					});
 				});
 
 			},
@@ -2355,9 +2349,9 @@ window.theme = {};
 
 // Word Rotate
 (function(theme, $) {
-	
+
 	theme = theme || {};
-	
+
 	var instanceName = '__wordRotate';
 
 	var PluginWordRotate = function($el, opts) {
@@ -2414,7 +2408,7 @@ window.theme = {};
 				.width(firstItem.width() + "px")
 				.append(firstItemClone);
 
-			$el				
+			$el
 				.addClass("active");
 
 			setInterval(function() {
@@ -2463,7 +2457,7 @@ window.theme = {};
 			} else {
 				return new PluginWordRotate($this, opts);
 			}
-			
+
 		});
 	}
 
@@ -2968,7 +2962,7 @@ window.theme = {};
 						self.deactivateStickyHeader();
 					}
 				};
-				
+
 				// Activate Sticky Header
 				self.activateStickyHeader = function() {
 
