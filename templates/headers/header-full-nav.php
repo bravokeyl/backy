@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $flyin_sidebar = composer_get_option_value( 'flyin_sidebar', 'off' );
- 
+
 ?>
 
 <header class="header">
@@ -32,11 +32,11 @@ $flyin_sidebar = composer_get_option_value( 'flyin_sidebar', 'off' );
 			<div class="right-side-wrap">
 				<div class="right-side-inner clearfix">
 					<?php
-						$main_sorter = array( 
+						$main_sorter = array(
 							"left" => array (
 								"placebo" 		=> "placebo", //REQUIRED!
 								"email"		=> "Email",
-								"tel"		=> "Telephone",		
+								"tel"		=> "Telephone",
 							),
 							"right" => array (
 								"placebo" 		=> "placebo", //REQUIRED!
@@ -48,8 +48,8 @@ $flyin_sidebar = composer_get_option_value( 'flyin_sidebar', 'off' );
 
 						$main_sorter_right = composer_get_option_array_value('main_sorter','right', $main_sorter['right'] );
 						foreach ( $main_sorter_right as $key => $value ) {
-							composer_display_header_elements( $key, 'lang-list-wrap', 'page-top-main' );
-						} 
+							//composer_display_header_elements( $key, 'lang-list-wrap', 'page-top-main' );
+						}
 					?>
 				</div>
 
@@ -72,7 +72,7 @@ $flyin_sidebar = composer_get_option_value( 'flyin_sidebar', 'off' );
 <div class="menu-wrap">
 
 	<div class="container">
-		<div class="menu-inner-wrap">	
+		<div class="menu-inner-wrap">
 			<nav class="main-nav">
 				<?php composer_main_nav(); ?>
 			</nav>
