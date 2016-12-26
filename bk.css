@@ -5,7 +5,7 @@
 .header .top-details a {
   color: #777;
 }
-.rent-quote a {
+.header .top-details.rent-quote a {
   color: #1471b8;
 }
 .LeaseStationButton.ls-detail-button {
