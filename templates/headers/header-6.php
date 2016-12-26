@@ -13,5 +13,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 echo '<div class="container-wrap">';
-	get_template_part ( 'templates/headers/header', 'full-nav' );
+	//get_template_part ( 'templates/headers/header', 'full-nav' );
 echo '</div>';
