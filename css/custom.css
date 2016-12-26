@@ -1,1 +1,7 @@
 /* Add here all your CSS customizations */
+.featured-box-full img {
+  margin: 0 auto;
+}
+.home-intro {
+  margin-bottom: 0px;
+}
