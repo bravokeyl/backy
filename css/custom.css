@@ -34,6 +34,9 @@ section.section-steps {
   border: 2px solid #eee;
   margin: 25px 0px;
 }
+.model-img {
+  padding-left: 30px;
+}
 .dimensions {
   margin-bottom: 15px;
 }
