@@ -51,7 +51,9 @@ function bk_wpv_wooimage(){
       $cat = $wp_query->get_queried_object();
       $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
       $image = wp_get_attachment_url( $thumbnail_id );
-      echo '<img src="'.$image.'" class="img-responsive" alt="mobile sink unit" width="667" height="250" />';
+			if($image) {
+				echo '<img src="'.$image.'" class="img-responsive" alt="mobile sink unit" width="667" height="250" />';
+			}
   }
 }
 
