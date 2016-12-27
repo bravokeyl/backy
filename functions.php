@@ -46,7 +46,7 @@ function bk_review_widget() {?>
 
 add_action('woocommerce_archive_description','bk_wpv_wooimage',7);
 function bk_wpv_wooimage(){
-	echo "<h2 class='bk-cat-title'>".get_the_title()."</h2>";
+	echo "<h2 class='bk-cat-title'>".single_cat_title( '', false )."</h2>";
   if (is_product_category( array ( 14, 15, 17, 18, 21, 22, 23, 24, 25, 26, 27, 40, 41, 42, 43, 20))){
       global $wp_query;
       $cat = $wp_query->get_queried_object();
