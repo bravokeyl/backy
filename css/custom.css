@@ -23,6 +23,20 @@ section.section-steps {
 .call-to-action.call-to-action-in-footer:before {
     border-top: 20px solid #ccc;
 }
+.call-to-action-secondary.call-to-action-in-footer:before {
+    border-top: 20px solid #fff;
+}
+.page-body {
+  margin-top: 30px;
+}
+.model {
+  padding: 20px 0px;
+  border: 2px solid #eee;
+  margin: 25px 0px;
+}
+.dimensions {
+  margin-bottom: 15px;
+}
 @media (max-width: 991px){
    .header-container.top-header {
       float: left;
