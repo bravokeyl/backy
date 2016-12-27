@@ -23,3 +23,8 @@ section.section-steps {
 .call-to-action.call-to-action-in-footer:before {
     border-top: 20px solid #ccc;
 }
+@media (max-width: 991px){
+   .header-container.top-header {
+      float: left;
+  }
+}
