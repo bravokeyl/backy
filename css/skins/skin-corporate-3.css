@@ -3832,13 +3832,7 @@ pre,
 .pagination-lg > li:last-child > span {
   border-radius: 0;
 }
-@media (min-width: 768px) {
-  .nav-tabs.nav-justified > li > a,
-  .nav-tabs-justified > li > a,
-  .navbar {
-    border-radius: 0;
-  }
-}
+
 #header .header-search .form-control,
 #header .header-nav-main nav > ul > li > a,
 #header .header-nav-main nav > ul > li.dropdown .dropdown-menu,
@@ -3935,21 +3929,4 @@ ul.comments .comment-block,
 .img-thumbnail.img-thumbnail-hover-icon:before,
 .product-thumb-info {
   border-radius: 0;
-}
-@media (max-width: 479px) {
-  .tabs .nav.nav-tabs.nav-justified li:first-child a,
-  .tabs .nav.nav-tabs.nav-justified li:first-child a:hover,
-  .tabs.tabs-bottom .nav.nav-tabs.nav-justified li:last-child a,
-  .tabs.tabs-bottom .nav.nav-tabs.nav-justified li:last-child a:hover {
-    border-radius: 0;
-  }
-}
-@media (min-width: 992px) {
-  #header nav.mega-menu ul.nav-main li.mega-menu-item ul.sub-menu a,
-  #header nav.mega-menu ul.nav-main li.mega-menu-fullwidth ul.dropdown-menu,
-  #header.flat-menu nav.mega-menu ul.nav-main li.mega-menu-fullwidth ul.dropdown-menu,
-  #header.flat-menu nav ul.nav-main li a,
-  html.boxed #header.flat-menu .header-top {
-    border-radius: 0;
-  }
 }
