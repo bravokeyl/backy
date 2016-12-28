@@ -23,6 +23,14 @@ section.section-steps {
 .home-intro {
   margin-bottom: 0px;
 }
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .icon-custom {
   display: inline-block;
   font-size: 40px;
@@ -63,14 +71,7 @@ section.section-steps {
 .dimensions {
   margin-bottom: 15px;
 }
-.fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+
 #footer .contact i.icon-envelope {
     font-size: 1em;
     top: 0;
