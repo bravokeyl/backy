@@ -658,8 +658,8 @@ dl dd {
 }
 
 .owl-carousel .owl-nav .owl-prev:before {
-	font-family: FontAwesome;
-	content: "\f053";
+	font-family: fontello;
+	content: "\e806";
 	position: relative;
 	left: -1px;
 	top: 1px;
@@ -670,8 +670,8 @@ dl dd {
 }
 
 .owl-carousel .owl-nav .owl-next:before {
-	font-family: FontAwesome;
-	content: "\f054";
+	font-family: fontello;
+	content: "\e807";
 	position: relative;
 	left: 2px;
 	top: 1px;
