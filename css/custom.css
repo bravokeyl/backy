@@ -63,6 +63,10 @@ section.section-steps {
 .dimensions {
   margin-bottom: 15px;
 }
+#footer .contact i.icon-envelope {
+    font-size: 1em;
+    top: 0;
+}
 @media (max-width: 991px){
   .header-container.top-header {
       float: left;
