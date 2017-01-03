@@ -72,7 +72,7 @@ if(!class_exists('FPD_Admin_Order')) {
 
 			if( isset($item['fpd_data']) ) {
 
-				$url = add_query_arg( array('order' => $order->id, 'item_id' => $item_id), get_permalink( $item['product_id'] ) );
+				$url = add_query_arg( array('order' => $order->id, 'item_id' => $item_id, 'start_customizing'=> 'yes'), get_permalink( $item['product_id'] ) );
 				echo sprintf( '<a href="%s" style="display: block;font-size: 0.9em;">%s</a>', $url, fpd_get_option('fpd_label_wc_order_email_view') );
 
 			}
