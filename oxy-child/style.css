@@ -1,0 +1,127 @@
+/*
+Theme Name:     Oxy Child
+Theme URI:      http://www.smartdatasoft.com/
+Description:    Child theme for Twenty Twelve
+Author:         Smartdatasoft Team
+Author URI:     http://www.smartdatasoft.com
+Template:       oxy
+Version:        1.0
+*/
+
+@import url("../oxy/style.css");
+
+.row .row {
+    max-width: none;
+    width: auto;
+}
+.woocommerce #content div.product .product-buy > div {
+    padding: 10px 0 1px;
+}
+.woocommerce ul.products > li, .woocommerce .product-list ul.products > li {
+    padding-bottom: 1px;
+    padding-top: 10px;
+}
+#top-line {
+    line-height: 28px;
+    margin-left: -10px;
+    margin-right: -10px;
+    min-height: 0;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+.fancy-product.fpd-customize-button-visible .product-buy .button {
+   display: none !important;
+}
+#t-header {
+    min-height: 110px;
+    padding: 13px 0;
+}
+h2 {
+    font-size: 30px;
+    color: #666666
+}
+h1 {
+    font-size: 32px;
+    color: #BAD560;
+}
+h3 {
+    font-size: 25px;
+}
+h4 {
+    font-size: 23px;
+    font-family: "ABeeZee",Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.product-grid .name a, .woocommerce ul.products .name a, #content .box-product .name a {
+    font-size: 20px;
+    line-height: 16px;
+}
+.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, h1, h2, h3, h4, h5, h6, #content .box-heading, .woocommerce form .form-row label, label, .woocommerce-page form .form-row label, #jckqv h1 {
+    color: #bad560;
+}
+.button, .widget_product_tag_cloud .tagcloud a, #column-right .box.widget_product_tag_cloud .tagcloud a, #column-left .box.widget_product_tag_cloud .tagcloud a, .tax-brands a.button, .tax-brands input.button, .woocommerce-page a.button, .woocommerce a.button, .woocommerce-page input.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce #content input.button, .product-grid .cart input.button, .product-list .cart input.button, #content .box-product .cart input.button, .product-right-sm-tags div a, .product-box-slider .cart input.button, .product-bottom-related .cart input.button, #header #cart .checkout .mini-cart-button {
+    background-color: #bad560;
+    color: #464646;
+}
+.box .tagcloud, .box .textwidget {
+    padding: 0px;
+} 
+.woocommerce ul.product_list_widget li > a {
+    color: #464646;
+    display: block;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.woocommerce ul.product_list_widget li img {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #eaeaea;
+    box-shadow: none;
+    float: left;
+    height: auto;
+    margin-left: 0;
+    margin-right: 15px;
+    padding: 4px;
+    width: 125px;
+}
+#column-left .box .box-heading, #column-left .product-box-slider .box-heading {
+    font-size: 20px;
+}
+#content .box-heading {
+    font-size: 30px;
+    color: #BAD560;
+    line-height: 24px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+}
+.product-grid .cart, #content .box-product .cart {
+    min-height: 1px;
+}
+.woocommerce .price, .woocommerce-page .price, #content .box-product .price {
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+.woocommerce ul.products > li .price {
+    margin: 3px 5% 2px;
+}
+.product-box-slider-flexslider .woocommerce ul.products > li .image, .woocommerce > ul.products > li .image, .product-grid .image, .box-product .image {
+    margin: 0 15px;
+}
+#column-right .box .box-heading, #column-right .product-box-slider .box-heading {
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  body #header {
+    background-image: url('/wp-content/uploads/2015/08/header-bg.png') !important;
+  }
+  #logo a {
+    float: left;
+  }
+  body #header #cart .heading {
+    float:right;
+  }
+}
