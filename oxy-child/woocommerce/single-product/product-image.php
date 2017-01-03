@@ -60,7 +60,7 @@ if(in_array($design, $leftcolimg_style)){
 <?php
 }
 ?>
-<div class="product-left <?php echo $imagewrap_class?> columns">
+<div class="product-left hdhdh <?php echo $imagewrap_class?> columns">
     <div class="image images">
         <?php do_action('oxy_product_sale_icon')?>
         <?php 

@@ -113,3 +113,15 @@ h4 {
 #column-right .box .box-heading, #column-right .product-box-slider .box-heading {
     font-size: 20px;
 }
+
+@media only screen and (min-width: 600px) {
+  body #header {
+    background-image: url('/wp-content/uploads/2015/08/header-bg.png') !important;
+  }
+  #logo a {
+    float: left;
+  }
+  body #header #cart .heading {
+    float:right;
+  }
+}

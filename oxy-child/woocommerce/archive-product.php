@@ -377,9 +377,9 @@ do_action('woocommerce_archive_description');
                                 <a href="#" class="switch_thumb">Switch Thumb</a>
                         </div>				
                 </div-->
-                <div class="product-filter">
+                <!-- <div class="product-filter"> -->
 
-                    <div class="sort">      
+                    <!-- <div class="sort">       -->
                         <?php
                         /**
                          * woocommerce_pagination hook
@@ -387,12 +387,12 @@ do_action('woocommerce_archive_description');
                          * @hooked woocommerce_pagination - 10
                          * @hooked woocommerce_catalog_ordering - 20
                          */
-                        do_action('woocommerce_pagination');
+                       // do_action('woocommerce_pagination');
                         ?>
-                        <?php do_action('woocommerce_before_shop_loop'); ?>
-                    </div>
+                        <?php //do_action('woocommerce_before_shop_loop'); ?>
+                    <!-- </div> -->
                     
-                </div>
+                <!-- </div> -->
 
 
 <?php if (have_posts()) : ?>
