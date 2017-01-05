@@ -79,10 +79,12 @@ add_shortcode('bk_section_content','bktw_bk_section_content');
 
 function bktw_bk_section($atts,$content = '') {
 	$atts = shortcode_atts( array(
-			 'color' => '#fff',
+			 'class' => '',
 	 ), $atts, 'bk_section' );
 
-	 $section   = '<section class="section">';
+	 $class = ( $atts['class'] ) ? ' ' . esc_attr(trim( $atts['class'] )) : '';
+
+	 $section   = '<section class="section '.$class.'">';
 	 $section  .= '<div class="container">';
 	 $section  .= '<div class="row">';
 	 $section  .= do_shortcode($content);
@@ -93,13 +95,13 @@ function bktw_bk_section($atts,$content = '') {
 }
 function bktw_bk_section_title($atts,$content = '') {
 	$title  = '<div class="col-sm-4">';
-	$title .= '<h2>'.$content.'</h2>';
+	$title .= '<h2>'.do_shortcode($content).'</h2>';
 	$title .= '</div>';
 	return $title;
 }
 function bktw_bk_section_content($atts,$content = '') {
 	$body  = '<div class="col-sm-8">';
-	$body .= $content;
+	$body .= do_shortcode($content);
 	$body .= '</div>';
 	return $body;
 }
