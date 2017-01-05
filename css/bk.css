@@ -9545,6 +9545,37 @@ img {
     max-width: 100%;
     height: auto;
 }
+.navbar .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    background-clip: padding-box;
+    padding-left: 0px;
+    list-style: none;
+}
+.navbar .sub-menu a.current-menu-item {
+    color: #ee7420;
+    text-decoration: underline
+}
+.navbar .sub-menu .menu-item {
+  width: 100%;
+}
+.navbar .sub-menu a {
+    color: #a9a9a9;
+}
+
 footer section {
   padding: 0px;
 }
