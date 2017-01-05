@@ -172,11 +172,7 @@ function identityexperts_resource_hints( $urls, $relation_type ) {
 }
 add_filter( 'wp_resource_hints', 'identityexperts_resource_hints', 10, 2 );
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
+
 function identityexperts_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Home Slider', 'identityexperts' ),
@@ -261,21 +257,11 @@ function identityexperts_widgets_init() {
 add_action( 'widgets_init', 'identityexperts_widgets_init' );
 
 
-/**
- * Handles JavaScript detection.
- *
- * Adds a `js` class to the root `<html>` element when JavaScript is detected.
- *
- * @since Twenty Seventeen 1.0
- */
 function identityexperts_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
 add_action( 'wp_head', 'identityexperts_javascript_detection', 0 );
 
-/**
- * Add a pingback url auto-discovery header for singularly identifiable articles.
- */
 function identityexperts_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
@@ -283,9 +269,6 @@ function identityexperts_pingback_header() {
 }
 add_action( 'wp_head', 'identityexperts_pingback_header' );
 
-/**
- * Display custom color CSS.
- */
 function identityexperts_colors_css_wrap() {
 	if ( 'custom' !== get_theme_mod( 'colorscheme' ) && ! is_customize_preview() ) {
 		return;
@@ -300,42 +283,14 @@ function identityexperts_colors_css_wrap() {
 <?php }
 add_action( 'wp_head', 'identityexperts_colors_css_wrap' );
 
-/**
- * Enqueue scripts and styles.
- */
+
 function identityexperts_scripts() {
-	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'identityexperts-fonts', identityexperts_fonts_url(), array(), null );
-
-	// Theme stylesheet.
 	wp_enqueue_style( 'identityexperts-style', get_theme_file_uri('css/bk.css') );
-
-	// Load the dark colorscheme.
-	if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
-		wp_enqueue_style( 'identityexperts-colors-dark', get_theme_file_uri( '/assets/css/colors-dark.css' ), array( 'identityexperts-style' ), '1.0' );
-	}
-
-	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
-	if ( is_customize_preview() ) {
-		wp_enqueue_style( 'identityexperts-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'identityexperts-style' ), '1.0' );
-		wp_style_add_data( 'identityexperts-ie9', 'conditional', 'IE 9' );
-	}
-
-	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'identityexperts-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'identityexperts-style' ), '1.0' );
-	wp_style_add_data( 'identityexperts-ie8', 'conditional', 'lt IE 9' );
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
-
-	if ( has_nav_menu( 'top' ) ) {
-		//wp_enqueue_script( 'identityexperts-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array(), '1.0', true );
-		$identityexperts_l10n['expand']         = __( 'Expand child menu', 'identityexperts' );
-		$identityexperts_l10n['collapse']       = __( 'Collapse child menu', 'identityexperts' );
-	}
-
-	//wp_enqueue_script( 'identityexperts-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '1.0', true );
 
 	wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.2', true );
 
@@ -387,30 +342,11 @@ function identityexperts_front_page_template( $template ) {
 }
 add_filter( 'frontpage_template',  'identityexperts_front_page_template' );
 
-/**
- * Implement the Custom Header feature.
- */
+
 require get_parent_theme_file_path( '/inc/custom-header.php' );
 
-/**
- * Custom template tags for this theme.
- */
 require get_parent_theme_file_path( '/inc/template-tags.php' );
 
-/**
- * Additional features to allow styling of the templates.
- */
 require get_parent_theme_file_path( '/inc/template-functions.php' );
 
-/**
- * Customizer additions.
- */
 require get_parent_theme_file_path( '/inc/customizer.php' );
-
-
-
-function identityexperts_nav_liclass($classes, $item, $args) {
-  $classes[] = 'col-sm-2';
-  return $classes;
-}
-//add_filter('nav_menu_css_class','identityexperts_nav_liclass',1,3);
