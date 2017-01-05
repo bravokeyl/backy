@@ -179,6 +179,36 @@ add_filter( 'wp_resource_hints', 'identityexperts_resource_hints', 10, 2 );
  */
 function identityexperts_widgets_init() {
 	register_sidebar( array(
+		'name'          => __( 'Home Slider', 'identityexperts' ),
+		'id'            => 'home-slider',
+		'description'   => __( 'Add widgets here to appear in your slider.', 'identityexperts' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Home Page Top', 'identityexperts' ),
+		'id'            => 'home-top',
+		'description'   => __( 'Add widgets here to appear in your top.', 'identityexperts' ),
+		'before_widget' => '<div id="%1$s" class="widget col-sm-4 %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Home Page Middle', 'identityexperts' ),
+		'id'            => 'home-middle',
+		'description'   => __( 'Add widgets here to appear in your middle section.', 'identityexperts' ),
+		'before_widget' => '<section id="%1$s" class="widget section %2$s"><div class="container"><div class="row">',
+		'after_widget'  => '</div></div></section>',
+		'before_title'  => '<div class="col-sm-4"><h2 class="widget-title">',
+		'after_title'   => '</h2></div>',
+		'before_widget_body' => '<div class="col-sm-8">',
+		'after_widget_body'  => '</div>'
+	) );
+
+	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'identityexperts' ),
 		'id'            => 'sidebar-1',
 		'description'   => __( 'Add widgets here to appear in your sidebar.', 'identityexperts' ),
@@ -300,12 +330,12 @@ function identityexperts_scripts() {
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
 	if ( has_nav_menu( 'top' ) ) {
-		wp_enqueue_script( 'identityexperts-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array(), '1.0', true );
+		//wp_enqueue_script( 'identityexperts-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array(), '1.0', true );
 		$identityexperts_l10n['expand']         = __( 'Expand child menu', 'identityexperts' );
 		$identityexperts_l10n['collapse']       = __( 'Collapse child menu', 'identityexperts' );
 	}
 
-	wp_enqueue_script( 'identityexperts-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '1.0', true );
+	//wp_enqueue_script( 'identityexperts-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '1.0', true );
 
 	wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.2', true );
 
