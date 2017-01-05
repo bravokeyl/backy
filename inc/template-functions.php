@@ -45,10 +45,6 @@ function identityexperts_body_classes( $classes ) {
 		$classes[] = 'title-tagline-hidden';
 	}
 
-	// Get the colorscheme or the default if there isn't one.
-	$colors = identityexperts_sanitize_colorscheme( get_theme_mod( 'colorscheme', 'light' ) );
-	$classes[] = 'colors-' . $colors;
-
 	return $classes;
 }
 add_filter( 'body_class', 'identityexperts_body_classes' );
@@ -57,13 +53,6 @@ function identityexperts_panel_count() {
 
 	$panel_count = 0;
 
-	/**
-	 * Filter number of front page sections in Twenty Seventeen.
-	 *
-	 * @since Twenty Seventeen 1.0
-	 *
-	 * @param $num_sections integer
-	 */
 	$num_sections = apply_filters( 'identityexperts_front_page_sections', 4 );
 
 	// Create a setting and control for each of the sections available in the theme.

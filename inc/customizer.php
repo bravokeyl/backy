@@ -20,39 +20,6 @@ function identityexperts_customize_register( $wp_customize ) {
 	) );
 
 	/**
-	 * Custom colors.
-	 */
-	$wp_customize->add_setting( 'colorscheme', array(
-		'default'           => 'light',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'identityexperts_sanitize_colorscheme',
-	) );
-
-	$wp_customize->add_setting( 'colorscheme_hue', array(
-		'default'           => 250,
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'absint', // The hue is stored as a positive integer.
-	) );
-
-	$wp_customize->add_control( 'colorscheme', array(
-		'type'    => 'radio',
-		'label'    => __( 'Color Scheme', 'identityexperts' ),
-		'choices'  => array(
-			'light'  => __( 'Light', 'identityexperts' ),
-			'dark'   => __( 'Dark', 'identityexperts' ),
-			'custom' => __( 'Custom', 'identityexperts' ),
-		),
-		'section'  => 'colors',
-		'priority' => 5,
-	) );
-
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'colorscheme_hue', array(
-		'mode' => 'hue',
-		'section'  => 'colors',
-		'priority' => 6,
-	) ) );
-
-	/**
 	 * Theme options.
 	 */
 	$wp_customize->add_section( 'theme_options', array(
@@ -130,27 +97,7 @@ function identityexperts_sanitize_page_layout( $input ) {
 	return '';
 }
 
-/**
- * Sanitize the colorscheme.
- */
-function identityexperts_sanitize_colorscheme( $input ) {
-	$valid = array( 'light', 'dark', 'custom' );
 
-	if ( in_array( $input, $valid ) ) {
-		return $input;
-	}
-
-	return 'light';
-}
-
-/**
- * Render the site title for the selective refresh partial.
- *
- * @since Twenty Seventeen 1.0
- * @see identityexperts_customize_register()
- *
- * @return void
- */
 function identityexperts_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
