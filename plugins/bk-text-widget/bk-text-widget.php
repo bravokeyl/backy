@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: BK Text Widget
+Plugin Name: BK Identity Experts
 Plugin URI: https://bravokeyl.com/
 Description:
 Version: 1.0.0
@@ -72,3 +72,34 @@ function register_bk_text_widget() {
 	register_widget( 'BK_Widget_Text' );
 }
 add_action( 'widgets_init', 'register_bk_text_widget' );
+
+add_shortcode('bk_section','bktw_bk_section');
+add_shortcode('bk_section_title','bktw_bk_section_title');
+add_shortcode('bk_section_content','bktw_bk_section_content');
+
+function bktw_bk_section($atts,$content = '') {
+	$atts = shortcode_atts( array(
+			 'color' => '#fff',
+	 ), $atts, 'bk_section' );
+
+	 $section   = '<section class="section">';
+	 $section  .= '<div class="container">';
+	 $section  .= '<div class="row">';
+	 $section  .= do_shortcode($content);
+	 $section  .= '</div>';
+	 $section  .= '</div>';
+	 $section  .= '</section>';
+	 return $section;
+}
+function bktw_bk_section_title($atts,$content = '') {
+	$title  = '<div class="col-sm-4">';
+	$title .= '<h2>'.$content.'</h2>';
+	$title .= '</div>';
+	return $title;
+}
+function bktw_bk_section_content($atts,$content = '') {
+	$body  = '<div class="col-sm-8">';
+	$body .= $content;
+	$body .= '</div>';
+	return $body;
+}
