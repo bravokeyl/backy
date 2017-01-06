@@ -9572,9 +9572,10 @@ form input[type=text], form input[type=email], form textarea {
 }
 @media only screen and (max-width: 600px) {
   .home-slider-section .slide-title {
-      font-size: 20px;
+      font-size: 18px;
   }
-  .home-slider-section .slide-content {
+  .home-slider-section .slide-content,
+  .slide-more {
       display: none;
   }
 }
