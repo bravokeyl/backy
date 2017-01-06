@@ -9304,7 +9304,7 @@ footer h4 {
 }*/
 
 .flexslider .flex-control-paging {
-    bottom: 0;
+    bottom: 20px;
     z-index: 999;
 }
 
