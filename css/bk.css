@@ -9338,6 +9338,7 @@ footer h4 {
 .home-slider-section .metaslider .caption-wrap {
     background: transparent;
     opacity: 1;
+    top: 100px;
 }
 .home-slider-section .slide-title {
     font-weight: 500;
