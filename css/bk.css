@@ -9318,9 +9318,15 @@ footer h4 {
     padding-top: 0!important
 }
 */
+.home-slider-section .flex-direction-nav a {
+  background: none;
+  text-indent: initial;
+  color: rgba(0,0,0,0);
+}
 .flex-direction-nav a:before {
     content: '\f104';
-    font-family: FontAwesome;
+    font-family: 'FontAwesome';
+    font-size: 40px;
     padding-top: 10px;
     color: #fff;
     text-shadow: none !important;
