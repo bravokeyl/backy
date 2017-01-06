@@ -9316,18 +9316,18 @@ footer h4 {
 .flex-direction-nav li {
     padding-top: 0!important
 }
-
+*/
 .flex-direction-nav a:before {
-    content: '\f104'!important;
-    font-family: FontAwesome!important;
+    content: '\f104';
+    font-family: FontAwesome;
     padding-top: 10px;
-    color: #fff!important;
-    text-shadow: none!important
+    color: #fff;
+    text-shadow: none !important;
 }
 
 .flex-direction-nav a.flex-next:before {
-    content: '\f105'!important
-}*/
+    content: '\f105';
+}
 
 .team-profile {
     margin-bottom: 15px
