@@ -321,12 +321,15 @@ function identityexperts_post_thumbnail_sizes_attr( $attr, $attachment, $size ) 
 }
 add_filter( 'wp_get_attachment_image_attributes', 'identityexperts_post_thumbnail_sizes_attr', 10, 3 );
 
-
 function identityexperts_front_page_template( $template ) {
 	return is_home() ? '' : $template;
 }
 add_filter( 'frontpage_template',  'identityexperts_front_page_template' );
 
+add_action( 'init', 'identityexperts_page_excerpt' );
+function identityexperts_page_excerpt() {
+	add_post_type_support( 'page', 'excerpt' );
+}
 
 require get_parent_theme_file_path( '/inc/custom-header.php' );
 
