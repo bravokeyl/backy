@@ -9569,6 +9569,12 @@ form input[type=text], form input[type=email], form textarea {
         opacity: 1;
         top: 20px;
     }
+    .home-slider-section .slide-title {
+        font-size: 24px;
+    }
+    .home-slider-section .slide-content {
+        font-size: 18px;
+    }
 }
 @media only screen and (max-width: 600px) {
   .home-slider-section .slide-title {
@@ -9577,6 +9583,12 @@ form input[type=text], form input[type=email], form textarea {
   .home-slider-section .slide-content,
   .slide-more {
       display: none;
+  }
+  .home-slider-section .flex-direction-nav {
+    display: none;
+  }
+  .home-slider-section .metaslider .flexslider {
+    margin-bottom: 0px;
   }
 }
 
