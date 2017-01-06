@@ -9303,9 +9303,10 @@ footer h4 {
     z-index: 9999
 }*/
 
-/*.flexslider .flex-control-paging {
-    bottom: 0!important
-}*/
+.flexslider .flex-control-paging {
+    bottom: 0;
+    z-index: 999;
+}
 
 /*.flex-direction-nav {
     position: absolute;
