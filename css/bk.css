@@ -9335,7 +9335,24 @@ footer h4 {
 .flex-direction-nav a.flex-next:before {
     content: '\f105';
 }
-
+.home-slider-section .metaslider .caption-wrap {
+    background: transparent;
+}
+.home-slider-section .slide-title {
+  font-weight: 500;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 36px;
+  color: #fff;
+  margin: 0 0 30px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+}
+.home-slider-section .slide-content {
+  color: #fff;
+  margin: 30px 0;
+  font-size: 24px;
+  font-weight: 300;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+}
 .team-profile {
     margin-bottom: 15px
 }
