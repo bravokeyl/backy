@@ -9283,7 +9283,7 @@ footer h4 {
     text-decoration: none
 }
 
-.flexslider {
+/*.flexslider {
     border: none!important
 }
 
@@ -9301,13 +9301,13 @@ footer h4 {
     top: 50%;
     zoom: 1;
     z-index: 9999
-}
+}*/
 
-.flexslider .flex-control-paging {
+/*.flexslider .flex-control-paging {
     bottom: 0!important
-}
+}*/
 
-.flex-direction-nav {
+/*.flex-direction-nav {
     position: absolute;
     top: 50%;
     width: 100%
@@ -9327,7 +9327,7 @@ footer h4 {
 
 .flex-direction-nav a.flex-next:before {
     content: '\f105'!important
-}
+}*/
 
 .team-profile {
     margin-bottom: 15px
