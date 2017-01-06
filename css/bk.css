@@ -9585,9 +9585,6 @@ form input[type=text], form input[type=email], form textarea {
   .home-slider-section .flex-direction-nav {
     display: none;
   }
-  .home-slider-section .metaslider .flexslider {
-    margin-bottom: 0px;
-  }
   .home-slider-section .metaslider .caption-wrap {
       top: 40%;
   }
@@ -9607,7 +9604,9 @@ img {
     z-index: 1000;
     display: none;
     float: left;
-    min-width: 160px;
+    .home-slider-section .metaslider .flexslider {
+    margin-bottom: 0px;
+  }min-width: 160px;
     padding: 5px 0;
     margin: 2px 0 0;
     list-style: none;
@@ -9637,6 +9636,9 @@ footer section {
 footer ul {
   padding-left: 0px;
   list-style: none;
+}
+.home-slider-section .metaslider .flexslider {
+  margin-bottom: 0px;
 }
 @media (min-width: 768px) {
   header .menu-item {
