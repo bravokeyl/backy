@@ -9569,12 +9569,17 @@ form input[type=text], form input[type=email], form textarea {
         opacity: 1;
         top: 20px;
     }
-    .home-slider-section .slide-title {
-        font-size: 20px;
-    }
-    .home-slider-section .slide-content {
-        display: none;
-    }
+}
+@media only screen and (max-width: 600px) {
+  .home-slider-section .slide-title {
+      font-size: 20px;
+  }
+  .home-slider-section .slide-content {
+      display: none;
+  }
+  .home-slider-section {
+    display: none;
+  }
 }
 
 
