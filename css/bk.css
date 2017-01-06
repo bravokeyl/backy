@@ -9459,7 +9459,7 @@ form input[type=text], form input[type=email], form textarea {
 }
 
 @media only screen and (max-width:768px) {
-    section {
+    .section {
         padding: 60px 0
     }
     footer {
@@ -9563,6 +9563,17 @@ form input[type=text], form input[type=email], form textarea {
     }
     .nhs {
         background-position: 70% 70%!important
+    }
+    .home-slider-section .metaslider .caption-wrap {
+        background: transparent;
+        opacity: 1;
+        top: 20px;
+    }
+    .home-slider-section .slide-title {
+        font-size: 20px;
+    }
+    .home-slider-section .slide-content {
+        display: none;
     }
 }
 
