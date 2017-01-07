@@ -9647,7 +9647,7 @@ img {
   padding-left: 5px;
   font-family: FontAwesome;
 }
-.menu-item-has-children.open .sub-menu {
+.menu-item-has-children.on .sub-menu {
   display: block;
 }
 footer section {
