@@ -182,7 +182,7 @@ add_action( 'wp_head', 'identityexperts_pingback_header' );
 function identityexperts_scripts() {
 	wp_enqueue_style( 'identityexperts-fonts', identityexperts_fonts_url(), array(), null );
 	wp_enqueue_style( 'identityexperts-style', get_theme_file_uri('css/bk.css') );
-
+	wp_enqueue_script('bootstrap-js',get_theme_file_uri('lib/bootstrap/dist/js/bootstrap.min.js'),array('jquery'),'',true);
 	wp_enqueue_script( 'bk', get_theme_file_uri( '/assets/js/bk.js' ), array( 'jquery' ), '2.1.2', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

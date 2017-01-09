@@ -9685,3 +9685,8 @@ footer ul {
     width: 16.66666667%;
   }
 }
+@media (max-width: 320px) {
+  .navbar .navbar-brand {
+    width: 230px;
+  }
+}
