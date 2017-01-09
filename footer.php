@@ -2,14 +2,18 @@
 		<div class="action-bar">
 			<div class="container">
 				<div class="row">
+					<?php
+	          $cemail = get_theme_mod( 'contact_email' );
+	          $phno = get_theme_mod( 'contact_number' );
+	        ?>
 					<div class="col-md-6 col-sm-5">
 						<p><i class="fa fa-map-marker"></i>Identity Experts, Media Centre, Huddersfield, HD1 1RL</p>
 					</div>
 					<div class="col-md-2 col-sm-3">
-						<p><a href="tel:0333 344 4950"><i class="fa fa-phone"></i><span="number>03333 444950<span></span></span="number></a></p>
+						<p><a href="tel:<?php echo $phno;?>"><i class="fa fa-phone"></i><span="number><?php echo $phno;?></span></a></p>
 					</div>
 					<div class="col-md-4 col-sm-4">
-						<p><a href="mailto:info@identityexperts.co.uk"><i class="fa fa-paper-plane-o"></i>info@identityexperts.co.uk</a></p>
+						<p><a href="mailto:<?php echo $cemail;?>"><i class="fa fa-paper-plane-o"></i><?php echo $cemail;?></a></p>
 					</div>
 				</div>
 			</div>
