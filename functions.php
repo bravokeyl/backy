@@ -256,12 +256,6 @@ function identityexperts_widgets_init() {
 }
 add_action( 'widgets_init', 'identityexperts_widgets_init' );
 
-
-function identityexperts_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
-}
-add_action( 'wp_head', 'identityexperts_javascript_detection', 0 );
-
 function identityexperts_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
@@ -336,5 +330,7 @@ require get_parent_theme_file_path( '/inc/custom-header.php' );
 require get_parent_theme_file_path( '/inc/template-tags.php' );
 
 require get_parent_theme_file_path( '/inc/template-functions.php' );
+
+require get_parent_theme_file_path( '/inc/team-meta.php' );
 
 require get_parent_theme_file_path( '/inc/customizer.php' );
