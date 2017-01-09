@@ -324,7 +324,80 @@ add_action( 'init', 'identityexperts_page_excerpt' );
 function identityexperts_page_excerpt() {
 	add_post_type_support( 'page', 'excerpt' );
 }
+add_action('wp_footer','identityexperts_map');
+function identityexperts_map() {
+	if(is_page('contact')){ ?>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script type="text/javascript">
+			var map;
+			var map2;
+			var myLatlng = new google.maps.LatLng(53.647036, -1.780880);
+			var mymarker = new google.maps.LatLng(53.649274, -1.780880);
+			var myLatlng2 = new google.maps.LatLng(50.7245405, -3.4706262);
+			var mymarker2 = new google.maps.LatLng(50.7269643, -3.4706262);
 
+			var MY_MAPTYPE_ID = 'quantiam';
+			var MY_MAPTYPE_ID2 = 'quantiam';
+
+			function initialize() {
+				var featureOpts = [
+					{
+						stylers: [
+							{ hue: '#ee7420' },
+							{ visibility: 'simplified' },
+							{ gamma: 0.6 },
+							{ weight: 0.5 },
+							{ saturation: 10 },
+							{ lightness: 0 }
+						]
+					}
+				];
+
+				var mapOptions = {
+					zoom: 15,
+					center: myLatlng,
+					disableDefaultUI: true,
+					mapTypeId: MY_MAPTYPE_ID
+				};
+
+				var mapOptions2 = {
+			    		zoom: 15,
+			    		center: myLatlng2,
+			    		disableDefaultUI: true,
+			    		mapTypeId: MY_MAPTYPE_ID2
+				};
+
+				map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+				map2 = new google.maps.Map(document.getElementById('map-canvas2'), mapOptions2);
+
+				var styledMapOptions = {
+					name: 'Identity Experts'
+				};
+				var styledMapOptions2 = {
+				  		name: 'Quantiam2'
+				  	};
+
+				var marker = new google.maps.Marker({
+					position: mymarker,
+					map: map,
+					title: 'Identity Experts'
+				});
+
+				var marker2 = new google.maps.Marker({
+							position: mymarker2,
+				  		map: map2,
+				  		title: 'Quantiam2'
+				  	});
+
+				var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+				var customMapType2 = new google.maps.StyledMapType(featureOpts, styledMapOptions2);
+				map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+				map2.mapTypes.set(MY_MAPTYPE_ID2, customMapType2);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	<?php }
+}
 require get_parent_theme_file_path( '/inc/custom-header.php' );
 
 require get_parent_theme_file_path( '/inc/template-tags.php' );
