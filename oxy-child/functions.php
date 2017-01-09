@@ -21,7 +21,7 @@ function ybt_header_carts(){?>
 	</div>
 <?php }
 
-//add_filter( 'woocommerce_add_to_cart_fragments', 'ybt_cart_fragment_update' );
+add_filter( 'woocommerce_add_to_cart_fragments', 'ybt_cart_fragment_update' );
 function ybt_cart_fragment_update( $fragments ) {
 	global $woocommerce;
 	ob_start();
