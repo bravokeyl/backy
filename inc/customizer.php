@@ -115,11 +115,3 @@ function identityexperts_customize_preview_js() {
 	wp_enqueue_script( 'identityexperts-customize-preview', get_theme_file_uri( '/assets/js/customize-preview.js' ), array( 'customize-preview' ), '1.0', true );
 }
 add_action( 'customize_preview_init', 'identityexperts_customize_preview_js' );
-
-/**
- * Load dynamic logic for the customizer controls area.
- */
-function identityexperts_panels_js() {
-	wp_enqueue_script( 'identityexperts-customize-controls', get_theme_file_uri( '/assets/js/customize-controls.js' ), array(), '1.0', true );
-}
-add_action( 'customize_controls_enqueue_scripts', 'identityexperts_panels_js' );
