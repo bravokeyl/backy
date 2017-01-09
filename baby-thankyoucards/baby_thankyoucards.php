@@ -26,19 +26,21 @@ if ( !class_exists( 'Agile_Baby_Thankyou' )){
 			add_filter( 'woocommerce_add_cart_item', array(&$this,'woocommerce_add_cart_item' ) ,20 ,3);
 		}
 
-		function woocommerce_add_cart_item($cart_item_data,$itt,$cart_item_key){
+		function woocommerce_add_cart_item($cart_item_data, $itt, $cart_item_key){
 			$items = WC()->cart->get_cart();
       if ( empty($items) ) {
 				$cart_item_data['quantity'] =  10;
       } else {
 				foreach($items as $item => $values) {
 					if($cart_item_data['product_id'] == $values['product_id']){
-							if($values['quantity'] >= 10) {
+							if($values['quantity'] > 10) {
 								$cart_item_data['quantity'] = $values['quantity'];
+								//wp_die("Product:".$cart_item_data['product_id'].",".$cart_item_data['quantity'].",".$values['quantity']);
 							} else {
+							  wp_die('cart quantity lessthan 10');
 								$cart_item_data['quantity'] = 10;
 							}
-							// wp_die($cart_item_data['product_id']);
+
 					} else {
 						$cart_item_data['quantity'] =  10;
 					}
