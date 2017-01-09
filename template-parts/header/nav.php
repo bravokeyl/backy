@@ -2,8 +2,12 @@
   <div class="container">
     <div class="navbar-header">
       <ul class="contact-info list-inline">
-        <li><a href="tel:0333 3444950"><i class="fa fa-phone"></i><span class="number"> 03333 444950</span></a></li>
-        <li><a href="mailto:info@identityexperts.co.uk"><i class="fa fa-paper-plane"></i>info@identityexperts.co.uk</a></li>
+        <?php
+          $email = get_theme_mod( 'contact_email' );
+          $pno = get_theme_mod( 'contact_number' );
+        ?>
+        <li><a href="tel:<?php echo esc_attr($pno);?>"><i class="fa fa-phone"></i><span class="number"><?php echo $pno;?></span></a></li>
+        <li><a href="mailto:<?php echo esc_attr($email);?>"><i class="fa fa-paper-plane"></i><?php echo get_theme_mod( 'contact_email' );?></a></li>
       </ul>
       <a class="navbar-brand" href="/">
       <img src="/wp-content/themes/identity-experts/img/logo.png" alt="Identity Experts Logo">

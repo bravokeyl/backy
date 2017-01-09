@@ -9402,7 +9402,9 @@ form input[type=text], form input[type=email], form textarea {
     border: 1px solid #e1e1e1!important;
     box-shadow: none!important
 }
-
+form textarea {
+  height: auto;
+}
 .help-block {
     color: red;
     margin-top: -15px;
