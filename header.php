@@ -48,7 +48,17 @@
     </div>
   </div>
 	<?php } else {?>
-
+		<div class="hero" style="<?php echo $fea_style;?>" >
+		    <div class="container">
+		    	<div class="row">
+		    		<div class="col-sm-8">
+		    			<div class="sub-title"></div>
+		    			<h1><?php the_title();?></h1>
+		    			<p><?php the_excerpt();?></p>
+		    		</div>
+		    	</div>
+		    </div>
+		  </div>
 	<?php } ?>
 	<div class="site-content-contain">
 		<div id="content" class="site-content">
