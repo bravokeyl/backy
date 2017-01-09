@@ -37,7 +37,7 @@ if ( !class_exists( 'Agile_Baby_Thankyou' )){
 								$cart_item_data['quantity'] = $values['quantity'];
 								//wp_die("Product:".$cart_item_data['product_id'].",".$cart_item_data['quantity'].",".$values['quantity']);
 							} else {
-							  wp_die('cart quantity lessthan 10');
+							  //wp_die('cart quantity lessthan 10');
 								$cart_item_data['quantity'] = 10;
 							}
 
