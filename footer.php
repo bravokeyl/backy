@@ -5,12 +5,13 @@
 					<?php
 	          $cemail = get_theme_mod( 'contact_email' );
 	          $phno = get_theme_mod( 'contact_number' );
+						$aaddr = get_theme_mod( 'contact_address' );
 	        ?>
 					<div class="col-md-6 col-sm-5">
-						<p><i class="fa fa-map-marker"></i>Identity Experts, Media Centre, Huddersfield, HD1 1RL</p>
+						<p><i class="fa fa-map-marker"></i><?php echo $aaddr;?></p>
 					</div>
 					<div class="col-md-2 col-sm-3">
-						<p><a href="tel:<?php echo $phno;?>"><i class="fa fa-phone"></i><span="number><?php echo $phno;?></span></a></p>
+						<p><a href="tel:<?php echo $phno;?>"><i class="fa fa-phone"></i><span><?php echo $phno;?></span></a></p>
 					</div>
 					<div class="col-md-4 col-sm-4">
 						<p><a href="mailto:<?php echo $cemail;?>"><i class="fa fa-paper-plane-o"></i><?php echo $cemail;?></a></p>

@@ -58,6 +58,21 @@ function identityexperts_customize_register( $wp_customize ) {
 		'active_callback' => 'identityexperts_contact_email_option',
 	) );
 
+	$wp_customize->add_setting( 'contact_address', array(
+		'default'           => 'Identity Experts, Media Centre, Huddersfield, HD1 1RL',
+		'sanitize_callback' => 'identityexperts_sanitize_contact_address',
+		'transport'         => 'postMessage',
+	) );
+
+
+	$wp_customize->add_control( 'contact_address', array(
+		'label'       => __( 'Contact Address', 'identityexperts' ),
+		'section'     => 'theme_options',
+		'type'        => 'textarea',
+		'description' => __( 'Contact Address.', 'identityexperts' ),
+		'active_callback' => 'identityexperts_contact_address_option',
+	) );
+
 }
 add_action( 'customize_register', 'identityexperts_customize_register' );
 
@@ -67,6 +82,9 @@ function identityexperts_sanitize_contact_number( $input ) {
 }
 
 function identityexperts_sanitize_contact_email( $input ) {
+	return esc_html($input);
+}
+function identityexperts_sanitize_contact_address( $input ) {
 	return esc_html($input);
 }
 
@@ -85,6 +103,9 @@ function identityexperts_contact_number_option() {
 
 function identityexperts_contact_email_option() {
 	return '';
+}
+function identityexperts_contact_address_option() {
+	return true;
 }
 
 /**
