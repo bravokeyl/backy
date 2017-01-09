@@ -32,90 +32,6 @@ function identityexperts_setup() {
 
 	add_editor_style( array( 'assets/css/editor-style.css', identityexperts_fonts_url() ) );
 
-	add_theme_support( 'starter-content', array(
-		'widgets' => array(
-			'sidebar-1' => array(
-				'text_business_info',
-				'search',
-				'text_about',
-			),
-
-			'sidebar-2' => array(
-				'text_business_info',
-			),
-
-			'sidebar-3' => array(
-				'text_about',
-				'search',
-			),
-		),
-
-		'posts' => array(
-			'home',
-			'about' => array(
-				'thumbnail' => '{{image-sandwich}}',
-			),
-			'contact' => array(
-				'thumbnail' => '{{image-espresso}}',
-			),
-			'blog' => array(
-				'thumbnail' => '{{image-coffee}}',
-			),
-			'homepage-section' => array(
-				'thumbnail' => '{{image-espresso}}',
-			),
-		),
-
-		'attachments' => array(
-			'image-espresso' => array(
-				'post_title' => _x( 'Espresso', 'Theme starter content' ),
-				'file' => 'assets/images/espresso.jpg',
-			),
-			'image-sandwich' => array(
-				'post_title' => _x( 'Sandwich', 'Theme starter content' ),
-				'file' => 'assets/images/sandwich.jpg',
-			),
-			'image-coffee' => array(
-				'post_title' => _x( 'Coffee', 'Theme starter content' ),
-				'file' => 'assets/images/coffee.jpg',
-			),
-		),
-
-		'options' => array(
-			'show_on_front' => 'page',
-			'page_on_front' => '{{home}}',
-			'page_for_posts' => '{{blog}}',
-		),
-
-		'theme_mods' => array(
-			'panel_1' => '{{homepage-section}}',
-			'panel_2' => '{{about}}',
-			'panel_3' => '{{blog}}',
-			'panel_4' => '{{contact}}',
-		),
-
-		'nav_menus' => array(
-			'top' => array(
-				'name' => __( 'Top Menu', 'identityexperts' ),
-				'items' => array(
-					'page_home',
-					'page_about',
-					'page_blog',
-					'page_contact',
-				),
-			),
-			'social' => array(
-				'name' => __( 'Social Links Menu', 'identityexperts' ),
-				'items' => array(
-					'link_yelp',
-					'link_facebook',
-					'link_twitter',
-					'link_instagram',
-					'link_email',
-				),
-			),
-		),
-	) );
 }
 add_action( 'after_setup_theme', 'identityexperts_setup' );
 
@@ -267,11 +183,7 @@ function identityexperts_scripts() {
 	wp_enqueue_style( 'identityexperts-fonts', identityexperts_fonts_url(), array(), null );
 	wp_enqueue_style( 'identityexperts-style', get_theme_file_uri('css/bk.css') );
 
-	// Load the html5 shiv.
-	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
-	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/bk.js' ), array( 'jquery' ), '2.1.2', true );
+	wp_enqueue_script( 'bk', get_theme_file_uri( '/assets/js/bk.js' ), array( 'jquery' ), '2.1.2', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -279,51 +191,11 @@ function identityexperts_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'identityexperts_scripts' );
 
-function identityexperts_content_image_sizes_attr( $sizes, $size ) {
-	$width = $size[0];
-
-	if ( 740 <= $width ) {
-		$sizes = '(max-width: 706px) 89vw, (max-width: 767px) 82vw, 740px';
-	}
-
-	if ( is_active_sidebar( 'sidebar-1' ) || is_archive() || is_search() || is_home() || is_page() ) {
-		if ( ! ( is_page() && 'one-column' === get_theme_mod( 'page_options' ) ) && 767 <= $width ) {
-			 $sizes = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
-		}
-	}
-
-	return $sizes;
-}
-add_filter( 'wp_calculate_image_sizes', 'identityexperts_content_image_sizes_attr', 10, 2 );
-
-function identityexperts_header_image_tag( $html, $header, $attr ) {
-	if ( isset( $attr['sizes'] ) ) {
-		$html = str_replace( $attr['sizes'], '100vw', $html );
-	}
-	return $html;
-}
-add_filter( 'get_header_image_tag', 'identityexperts_header_image_tag', 10, 3 );
-
-function identityexperts_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
-	if ( is_archive() || is_search() || is_home() ) {
-		$attr['sizes'] = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
-	} else {
-		$attr['sizes'] = '100vw';
-	}
-
-	return $attr;
-}
-add_filter( 'wp_get_attachment_image_attributes', 'identityexperts_post_thumbnail_sizes_attr', 10, 3 );
-
-function identityexperts_front_page_template( $template ) {
-	return is_home() ? '' : $template;
-}
-add_filter( 'frontpage_template',  'identityexperts_front_page_template' );
-
 add_action( 'init', 'identityexperts_page_excerpt' );
 function identityexperts_page_excerpt() {
 	add_post_type_support( 'page', 'excerpt' );
 }
+
 add_action('wp_footer','identityexperts_map');
 function identityexperts_map() {
 	if(is_page('contact')){ ?>
