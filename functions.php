@@ -30,8 +30,6 @@ function identityexperts_setup() {
 
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-	add_editor_style( array( 'assets/css/editor-style.css', identityexperts_fonts_url() ) );
-
 }
 add_action( 'after_setup_theme', 'identityexperts_setup' );
 
