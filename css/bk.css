@@ -8923,9 +8923,9 @@ p a {
     text-decoration: underline
 }
 
-p+p {
+/*p+p {
     margin-top: 40px
-}
+}*/
 
 .fa {
     margin-right: 7px
