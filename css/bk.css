@@ -9679,6 +9679,9 @@ footer ul {
 .bk-phone {
   margin-right: 15px;
 }
+.error-404 h1 {
+  color: #000;
+}
 @media (min-width: 768px) {
   header .menu-item {
     position: relative;

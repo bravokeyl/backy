@@ -31,8 +31,8 @@ get_header(); ?>
 			endwhile;
 
 			the_posts_pagination( array(
-				'prev_text' => identityexperts_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'identityexperts' ) . '</span>',
-				'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'identityexperts' ) . '</span>' . identityexperts_get_svg( array( 'icon' => 'arrow-right' ) ),
+				'prev_text' => '<span>Previous</span><span class="screen-reader-text">' . __( 'Previous page', 'identityexperts' ) . '</span>',
+				'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'identityexperts' ) . '</span><span>Previous</span>'),
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'identityexperts' ) . ' </span>',
 			) );
 

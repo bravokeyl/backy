@@ -38,14 +38,14 @@ if ( post_password_required() ) {
 					'avatar_size' => 100,
 					'style'       => 'ol',
 					'short_ping'  => true,
-					'reply_text'  => identityexperts_get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'identityexperts' ),
+					'reply_text'  => __( 'Reply', 'identityexperts' ),
 				) );
 			?>
 		</ol>
 
 		<?php the_comments_pagination( array(
-			'prev_text' => identityexperts_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'identityexperts' ) . '</span>',
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'identityexperts' ) . '</span>' . identityexperts_get_svg( array( 'icon' => 'arrow-right' ) ),
+			'prev_text' => '<i class="fa fa-arrow-left"></i><span class="screen-reader-text">' . __( 'Previous', 'identityexperts' ) . '</span>',
+			'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'identityexperts' ) . '</span><i class="fa fa-arrow-right"></i>',
 		) );
 
 	endif; // Check for have_comments().

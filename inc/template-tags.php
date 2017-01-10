@@ -72,11 +72,11 @@ function identityexperts_entry_footer() {
 
 						// Make sure there's more than one category before displaying.
 						if ( $categories_list && identityexperts_categorized_blog() ) {
-							echo '<span class="cat-links">' . identityexperts_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Categories', 'identityexperts' ) . '</span>' . $categories_list . '</span>';
+							echo '<span class="cat-links"><i class="fa fa-folder"></i><span class="screen-reader-text">' . __( 'Categories', 'identityexperts' ) . '</span>' . $categories_list . '</span>';
 						}
 
 						if ( $tags_list ) {
-							echo '<span class="tags-links">' . identityexperts_get_svg( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . __( 'Tags', 'identityexperts' ) . '</span>' . $tags_list . '</span>';
+							echo '<span class="tags-links"><i class="fa fa-tags"></i><span class="screen-reader-text">' . __( 'Tags', 'identityexperts' ) . '</span>' . $tags_list . '</span>';
 						}
 
 					echo '</span>';
