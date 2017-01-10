@@ -167,7 +167,7 @@ function identityexperts_page_excerpt() {
 add_action('wp_footer','identityexperts_map');
 function identityexperts_map() {
 	if(is_page('contact')){ ?>
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&keys=AIzaSyCtcrsf1cuDE46TxT99obY-MhXzQg5m7bc"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCtcrsf1cuDE46TxT99obY-MhXzQg5m7bc"></script>
 		<script type="text/javascript">
 			var map;
 			var map2;
