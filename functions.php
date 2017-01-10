@@ -47,35 +47,6 @@ function identityexperts_content_width() {
 }
 add_action( 'after_setup_theme', 'identityexperts_content_width', 0 );
 
-/**
- * Register custom fonts.
- */
-function identityexperts_fonts_url() {
-	$fonts_url = '';
-
-	/**
-	 * Translators: If there are characters in your language that are not
-	 * supported by Libre Franklin, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'identityexperts' );
-
-	if ( 'off' !== $libre_franklin ) {
-		$font_families = array();
-
-		$font_families[] = 'Libre Franklin:300,300i,400,400i,600,600i,800,800i';
-
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-
-	return esc_url_raw( $fonts_url );
-}
-
 function identityexperts_resource_hints( $urls, $relation_type ) {
 	if ( wp_style_is( 'identityexperts-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
 		$urls[] = array(
@@ -180,7 +151,6 @@ function identityexperts_pingback_header() {
 add_action( 'wp_head', 'identityexperts_pingback_header' );
 
 function identityexperts_scripts() {
-	wp_enqueue_style( 'identityexperts-fonts', identityexperts_fonts_url(), array(), null );
 	wp_enqueue_style( 'identityexperts-style', get_theme_file_uri('css/bk.css') );
 	wp_enqueue_script('bootstrap-js',get_theme_file_uri('lib/bootstrap/dist/js/bootstrap.min.js'),array('jquery'),'',true);
 	wp_enqueue_script( 'bk', get_theme_file_uri( '/assets/js/bk.js' ), array( 'jquery' ), '2.1.2', true );
