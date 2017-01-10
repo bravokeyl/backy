@@ -30,8 +30,8 @@ get_header(); ?>
 
 			the_posts_pagination( array(
 				'prev_text' =>  '<span>Previous page</span><span class="screen-reader-text">' . __( 'Previous page', 'identityexperts' ) . '</span>',
-				'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'identityexperts' ) . '</span><span>Next page</span>'),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'identityexperts' ) . ' </span>',
+				'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'identityexperts' ) . '</span><span>Next page</span>',
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'identityexperts' ) . '</span>',
 			) );
 
 		else : ?>
