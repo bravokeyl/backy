@@ -9719,6 +9719,12 @@ footer ul {
 .error-404 h1 {
   color: #000;
 }
+.pt15 {
+  padding-top: 15px;
+}
+.mt15 {
+  margin-top: 15px;
+}
 @media (min-width: 768px) {
   header .menu-item {
     position: relative;
