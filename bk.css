@@ -39,11 +39,7 @@
 	float: left;
   padding-right: 10px;
 }
-.product-addon.product-addon-color {
-	float: none;
-  clear: both;
-  overflow: hidden;
-}
+
 .product-addon:nth-child(even){
    clear: right;
 }
