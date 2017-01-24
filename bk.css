@@ -44,6 +44,12 @@
   clear: both;
   overflow: hidden;
 }
+.product-addon:nth-child(even){
+   clear: right;
+}
+.product-addon:nth-child(odd){
+   clear: left;
+}
 .woo-products.container.boxed {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -63,4 +69,9 @@
 }
 .archive .product:nth-child(3n+1) {
   clear: left;
+}
+.woocommerce .breadcrumb,
+.search .breadcrumb,
+.breadcrumb span.current {
+  display: none;
 }

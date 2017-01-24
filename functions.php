@@ -110,7 +110,7 @@ function bk_display_header_elements( $elems, $header_pos = 'default-header-lang'
 	if( $elems == 'tel' ){
 		echo '<div class="header-elem">
 		    <p class="top-details rent-quote clearfix">
-		      <a href="/contact-us">Do you want to rent instead? Request a quote.</a>
+		      <a href="http://rentaportablesink.com/contact-us/" target="_blank">Do you want to rent instead? Request a quote.</a>
 		    </p>
 		</div>';
 		echo composer_header_contact_info_tel();
@@ -179,3 +179,6 @@ function bk_display_header_elements( $elems, $header_pos = 'default-header-lang'
 		echo '</div>';
 	}
 }
+
+remove_action('woocommerce_before_main_content', 'composer_woocommerce_remove_breadcrumb');
+remove_action( 'woo_custom_breadcrumb', 'composer_woocommerce_custom_breadcrumb' );
