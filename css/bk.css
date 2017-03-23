@@ -9725,7 +9725,8 @@ footer ul {
 .mt15 {
   margin-top: 15px;
 }
-.single  h1 {
+.single  h1,
+.archive h1 {
   color: #000;
 }
 .page h1 {

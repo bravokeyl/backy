@@ -4,7 +4,7 @@ get_header('builder'); ?>
 <div class="wrap">
 
 	<?php if ( have_posts() ) : ?>
-		<header class="page-header">
+		<header class="page-header container">
 			<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="taxonomy-description">', '</div>' );
@@ -20,7 +20,7 @@ get_header('builder'); ?>
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
-			
+
 				get_template_part( 'template-parts/post/section');
 
 			endwhile;
