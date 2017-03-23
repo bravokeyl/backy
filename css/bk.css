@@ -9725,6 +9725,23 @@ footer ul {
 .mt15 {
   margin-top: 15px;
 }
+.single  h1 {
+  color: #000;
+}
+.page h1 {
+  color: #fff;
+}
+.archive .section:nth-child(even) {
+  background: #efefef;
+  clear: both;
+  overflow: hidden;
+}
+.archive .post-thumbnail,
+.archive .default-post-thumbnail,
+.blog .post-thumbnail,
+.blog .default-post-thumbnail {
+  padding-left: 0px;
+}
 @media (min-width: 768px) {
   header .menu-item {
     position: relative;

@@ -1,16 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header container">
 		<?php
-			if ( 'post' === get_post_type() ) :
-				echo '<div class="entry-meta">';
-					if ( is_single() ) :
-						identityexperts_posted_on();
-					else :
-						echo identityexperts_time_link();
-						identityexperts_edit_link();
-					endif;
-				echo '</div><!-- .entry-meta -->';
-			endif;
 
 			if ( is_single() ) {
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -44,9 +34,5 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<?php if ( is_single() ) : ?>
-		<?php identityexperts_entry_footer(); ?>
-	<?php endif; ?>
 
 </article><!-- #post-## -->

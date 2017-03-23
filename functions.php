@@ -10,6 +10,7 @@ function identityexperts_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	add_image_size( 'identityexperts-thumbnail-avatar', 100, 100, true );
+	add_image_size( 'identityexperts-archive-image', 333, 195, true );
 
 	register_nav_menus( array(
 		'top'    => __( 'Primary Menu', 'identityexperts' )
@@ -78,10 +79,20 @@ function identityexperts_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name'          => __( 'Home Page - Second Section', 'identityexperts' ),
+		'id'            => 'home-two',
+		'description'   => __( 'Add widgets here to appear below top section.', 'identityexperts' ),
+		'before_widget' => '<div id="%1$s" class="widget col-sm-3 %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
 		'name'          => __( 'Home Page Middle', 'identityexperts' ),
 		'id'            => 'home-middle',
 		'description'   => __( 'Add widgets here to appear in your middle section.', 'identityexperts' ),
-		'before_widget' => '<section id="%1$s" class="widget section %2$s"><div class="container"><div class="row">',
+		'before_widget' => '<section id="%1$s" class="widget section grey %2$s"><div class="container"><div class="row">',
 		'after_widget'  => '</div></div></section>',
 		'before_title'  => '<div class="col-sm-4"><h2 class="widget-title">',
 		'after_title'   => '</h2></div>',
