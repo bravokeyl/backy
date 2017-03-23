@@ -82,7 +82,7 @@ function identityexperts_widgets_init() {
 		'name'          => __( 'Home Page - Second Section', 'identityexperts' ),
 		'id'            => 'home-two',
 		'description'   => __( 'Add widgets here to appear below top section.', 'identityexperts' ),
-		'before_widget' => '<div id="%1$s" class="widget col-sm-3 %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget section  %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
@@ -92,7 +92,7 @@ function identityexperts_widgets_init() {
 		'name'          => __( 'Home Page Middle', 'identityexperts' ),
 		'id'            => 'home-middle',
 		'description'   => __( 'Add widgets here to appear in your middle section.', 'identityexperts' ),
-		'before_widget' => '<section id="%1$s" class="widget section grey %2$s"><div class="container"><div class="row">',
+		'before_widget' => '<section id="%1$s" class="widget section %2$s"><div class="container"><div class="row">',
 		'after_widget'  => '</div></div></section>',
 		'before_title'  => '<div class="col-sm-4"><h2 class="widget-title">',
 		'after_title'   => '</h2></div>',
@@ -257,3 +257,5 @@ require get_parent_theme_file_path( '/inc/template-functions.php' );
 require get_parent_theme_file_path( '/inc/team-meta.php' );
 
 require get_parent_theme_file_path( '/inc/customizer.php' );
+
+add_filter('bk_widget_text', 'do_shortcode');

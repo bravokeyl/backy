@@ -9742,6 +9742,11 @@ footer ul {
 .blog .default-post-thumbnail {
   padding-left: 0px;
 }
+.bk-li-image .title {
+  padding-top: 10px;
+  display: inline-block;
+}
+
 @media (min-width: 768px) {
   header .menu-item {
     position: relative;
