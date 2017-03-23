@@ -9726,7 +9726,8 @@ footer ul {
   margin-top: 15px;
 }
 .single  h1,
-.archive h1 {
+.archive h1 ,
+.blog h1 {
   color: #000;
 }
 .page h1 {
