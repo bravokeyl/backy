@@ -7,10 +7,10 @@
 	          $phno = get_theme_mod( 'contact_number' );
 						$aaddr = get_theme_mod( 'contact_address' );
 	        ?>
-					<div class="bk-address-con col-md-7">
+					<div class="bk-address-con col-md-6 no-pad">
 						<p><i class="fa fa-map-marker"></i><?php echo $aaddr;?></p>
 					</div>
-					<div class="bk-tel-mail-con col-md-5">
+					<div class="bk-tel-mail-con col-md-6">
 						<div class="bk-tel-mail">
 							<a class="bk-phone" href="tel:<?php echo $phno;?>"><i class="fa fa-phone"></i><span><?php echo $phno;?></span></a>
 							<a class="bk-mail" href="mailto:<?php echo $cemail;?>"><i class="fa fa-paper-plane-o"></i><?php echo $cemail;?></a>

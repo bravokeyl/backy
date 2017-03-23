@@ -9748,7 +9748,9 @@ footer ul {
   padding-top: 10px;
   display: inline-block;
 }
-
+.no-pad {
+  padding: 0px;
+}
 @media (min-width: 768px) {
   header .menu-item {
     position: relative;
