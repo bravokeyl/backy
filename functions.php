@@ -69,7 +69,7 @@ function identityexperts_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Home Page Top', 'identityexperts' ),
+		'name'          => __( 'Home Page Top - Unsed', 'identityexperts' ),
 		'id'            => 'home-top',
 		'description'   => __( 'Add widgets here to appear in your top.', 'identityexperts' ),
 		'before_widget' => '<div id="%1$s" class="widget col-sm-4 %2$s">',
@@ -78,27 +78,27 @@ function identityexperts_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 
-	register_sidebar( array(
-		'name'          => __( 'Home Page - Second Section', 'identityexperts' ),
-		'id'            => 'home-two',
-		'description'   => __( 'Add widgets here to appear below top section.', 'identityexperts' ),
-		'before_widget' => '<div id="%1$s" class="widget section  %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
+	// register_sidebar( array(
+	// 	'name'          => __( 'Home Page - Second Section', 'identityexperts' ),
+	// 	'id'            => 'home-two',
+	// 	'description'   => __( 'Add widgets here to appear below top section.', 'identityexperts' ),
+	// 	'before_widget' => '<div id="%1$s" class="widget section  %2$s">',
+	// 	'after_widget'  => '</div>',
+	// 	'before_title'  => '<h3 class="widget-title">',
+	// 	'after_title'   => '</h3>',
+	// ) );
 
-	register_sidebar( array(
-		'name'          => __( 'Home Page Middle', 'identityexperts' ),
-		'id'            => 'home-middle',
-		'description'   => __( 'Add widgets here to appear in your middle section.', 'identityexperts' ),
-		'before_widget' => '<section id="%1$s" class="widget section %2$s"><div class="container"><div class="row">',
-		'after_widget'  => '</div></div></section>',
-		'before_title'  => '<div class="col-sm-4"><h2 class="widget-title">',
-		'after_title'   => '</h2></div>',
-		'before_widget_body' => '<div class="col-sm-8">',
-		'after_widget_body'  => '</div>'
-	) );
+	// register_sidebar( array(
+	// 	'name'          => __( 'Home Page Middle', 'identityexperts' ),
+	// 	'id'            => 'home-middle',
+	// 	'description'   => __( 'Add widgets here to appear in your middle section.', 'identityexperts' ),
+	// 	'before_widget' => '<section id="%1$s" class="widget section %2$s"><div class="container"><div class="row">',
+	// 	'after_widget'  => '</div></div></section>',
+	// 	'before_title'  => '<div class="col-sm-4"><h2 class="widget-title">',
+	// 	'after_title'   => '</h2></div>',
+	// 	'before_widget_body' => '<div class="col-sm-8">',
+	// 	'after_widget_body'  => '</div>'
+	// ) );
 
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'identityexperts' ),

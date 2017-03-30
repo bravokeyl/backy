@@ -1,19 +1,15 @@
 <?php
 get_header(); ?>
-<section class="home-top-section section grey">
-	<div class="container">
-		<div class="row">
-			<?php dynamic_sidebar('home-top'); ?>
-		</div>
-	</div>
-</section>
-
 <?php dynamic_sidebar('home-middle'); ?>
-<section class="home-section-two section grey">
-	<div class="container">
-		<div class="row">
-			<?php dynamic_sidebar('home-two'); ?>
-		</div>
-	</div>
-</section>
+<main id="main" class="site-main container" role="main">
+
+	<?php
+	while ( have_posts() ) : the_post();
+
+		get_template_part( 'template-parts/page/content', 'page' );
+
+	endwhile; // End of the loop.
+	?>
+</main><!-- #main -->
+
 <?php get_footer();
