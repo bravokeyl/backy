@@ -9747,6 +9747,8 @@ footer ul {
 .bk-li-image .title {
   padding-top: 10px;
   display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
 }
 .no-pad {
   padding: 0px;
